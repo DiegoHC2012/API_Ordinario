@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "1d3db2d3-39d6-417c-9be5-1db768779e1a",
+		"_postman_id": "49c0a660-b3a9-465c-a37f-69b9b3f56e56",
 		"name": "ordinario-DB",
-		"schema": "https://schchema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "3541125"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38490739"
 	},
 	"item": [
 		{
@@ -13,7 +13,18 @@
 					"name": "estudiantes",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/estudiantes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"estudiantes"
+							]
+						}
 					},
 					"response": []
 				},
@@ -32,14 +43,15 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/api/estudiantes",
+							"raw": "localhost:3000/api/estudiantes/addEstudiante",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"api",
-								"estudiantes"
+								"estudiantes",
+								"addEstudiante"
 							]
 						}
 					},
@@ -56,14 +68,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:3000/api/mestros",
+							"raw": "localhost:3000/api/maestros",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"api",
-								"mestros"
+								"maestros"
 							]
 						}
 					},
@@ -84,14 +96,15 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/api/mestros",
+							"raw": "localhost:3000/api/maestros/addMaestro",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"api",
-								"mestros"
+								"maestros",
+								"addMaestro"
 							]
 						}
 					},
@@ -126,15 +139,25 @@
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"{{$randomAdjective}}\",\r\n    \"profesor_id\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "localhost:3000/api/asignaturas",
+							"raw": "localhost:3000/api/asignaturas/addMateria",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"api",
-								"asignaturas"
+								"asignaturas",
+								"addMateria"
 							]
 						}
 					},
@@ -171,7 +194,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"estudiante_matricula\":\"{{$randomWord}}\",\n    \"maestro_correo\":\"{{$randomEmail}}\",\n    \"materia_nombre\":\"{{$randomWord}}\"\n}",
+							"raw": "{\n    \"estudiante_id\":4,\n    \"maestro_id\":2,\n    \"materia_id\":8,\n    \"calificacion\":\"{{$randomInt}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -179,14 +202,15 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/api/calificaciones",
+							"raw": "localhost:3000/api/calificaciones/addCalificacion",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
 								"api",
-								"calificaciones"
+								"calificaciones",
+								"addCalificacion"
 							]
 						}
 					},
