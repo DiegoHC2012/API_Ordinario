@@ -46,4 +46,7 @@ FOREIGN KEY (materia_id) REFERENCES materias(id)
 );
 
 INSERT INTO estudiantes(nombre, apellidos, email, matricula, edad, semestre, usuario_creacio, fecha_creacion)
-VALUES('PEE', 'POO', 'pee@poo.com', '15222100', 21, '425', 'Diosito', NOW());
+VALUES('QUE?????????', 'POO', 'pee@poo.com', '15222100', 21, '425', 'Diosito', NOW());
+
+INSERT INTO maestros(nombre, edad, telefono, correo, usuario_creacio, fecha_creacion)
+VALUES('Profesor', 30, 1234567, 'profe@gmail.com','Diosito', NOW());
